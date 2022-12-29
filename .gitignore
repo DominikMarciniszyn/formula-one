@@ -2,4 +2,5 @@
 .idea/
 
 # Python
-/formula-one-data-processor/venv/
+/formula-migrations/venv/
+/venv
