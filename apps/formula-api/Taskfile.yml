@@ -5,3 +5,6 @@ tasks:
     cmds:
       - npm start
     silent: true
+  docker-build:
+    cmds:
+      - docker build -f docker/Dockerfile .
