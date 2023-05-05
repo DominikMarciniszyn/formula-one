@@ -1,18 +1,7 @@
-import { ConfigValues } from "./config-scheme";
-
-export interface Config extends ConfigValues {}
-
-export class Config {
-    public static baseValues: ConfigValues;
-    private static instance?: Config;
-
-    constructor(values: ConfigValues) {
-        Object.assign(this, values);
+export default () => ({
+    port: parseInt(process.env.port, 10) || 3000,
+    database: {
+        host: process.env.DATABASE_HOST,
+        port: parseInt(process.env.DATABASE_PORT, 10) || 5432,
     }
-
-    static load(test?: boolean): Config {
-        return null;
-    }
-}
-
-export const config = Config.load();
+});
